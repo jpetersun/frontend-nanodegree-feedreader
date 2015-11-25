@@ -56,7 +56,7 @@ $(function() {
 
 
     /* TODO: Write a new test suite named "The menu" */
-    //describe('The menu', function() {
+    describe('The menu', function() {
 
 
 
@@ -65,14 +65,20 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        //it('element hidden')
+        it('element is hidden', function() {
+            var menuClass = document.getElementsByClassName('menu-hidden');
+            expect(document.querySelector('body')).toMatch(menuClass);
+        });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+        it('changes visibility when menu icon is clicked', function() {
 
+        })
+    });
     /* TODO: Write a new test suite named "Initial Entries" */
 
         /* TODO: Write a test that ensures when the loadFeed
@@ -88,5 +94,5 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-    //});
+
 }());
