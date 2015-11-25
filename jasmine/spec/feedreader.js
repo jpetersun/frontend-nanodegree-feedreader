@@ -66,7 +66,7 @@ $(function() {
          */
         it('element is hidden', function() {
             var menuHidden = $('body');
-            expect(menuHidden.hasClass('menu-hidden')).toBe(true);
+            expect(menuHidden.hasClass('menu-hidden')).not.toBeFalsy();
         });
 
          /* TODO: Write a test that ensures the menu changes
@@ -75,8 +75,11 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
         it('changes visibility when menu icon is clicked', function() {
-            // var menuClick = $('.menu-icon-link');
-            // expect(menuClick.hasClass('menu-hidden')).toBe(true);
+            var menuClick = $('.menu-icon-link');
+            menuClick.click();
+            expect($('body').hasClass('menu-hidden')).not.toBeTruthy();
+            menuClick.click();
+            expect($('body').hasClass('menu-hidden')).not.toBeFalsy();
         });
     });
     /* TODO: Write a new test suite named "Initial Entries" */
