@@ -31,22 +31,41 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-
+        it('URLs are defined', function() {
+            var feedsUrls = [];
+            for (var i = 0; i < allFeeds.length; i++) {
+                feedsUrls.push(allFeeds[i].url);
+            };
+            expect(feedsUrls).toBeDefined();
+            expect(feedsUrls.length).not.toBe(0);
+        });
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+        it('names are defined', function() {
+            var feedsName = [];
+            for (var i = 0; i < allFeeds.length; i++) {
+                feedsName.push(allFeeds[i].name);
+            };
+            expect(feedsName).toBeDefined();
+            expect(feedsName.length).not.toBe(0);
+        })
     });
 
 
     /* TODO: Write a new test suite named "The menu" */
+    //describe('The menu', function() {
+
+
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+        //it('element hidden')
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
@@ -69,4 +88,5 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+    //});
 }());
