@@ -64,7 +64,7 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        it('element is hidden', function() {
+        it('element is hidden by default', function() {
             var menuHidden = $('body');
             expect(menuHidden.hasClass('menu-hidden')).not.toBeFalsy();
         });
@@ -97,13 +97,30 @@ $(function() {
         it('has atleast one entry element within feed container', function() {
             expect($('.feed .entry').length).not.toBe(0);
         });
+    });
 
     /* TODO: Write a new test suite named "New Feed Selection"*/
+    describe('New Feed Selection', function() {
+
+        var firstFeed;
+
+        beforeEach(function(done) {
+            loadFeed(0, function() {
+                firstFeed = $('.feed').html();
+                done();
+            });
+        });
 
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        it('content changes and is unique', function(done) {
+            loadFeed(1, function() {
+                expect($('.feed').html() !== firstFeed).toBeTruthy();
+                done();
+            });
+        });
     });
 }());
