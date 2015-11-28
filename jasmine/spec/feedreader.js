@@ -122,5 +122,10 @@ $(function() {
                 done();
             });
         });
+
+        //Revert feed back to orginal
+        afterEach(function(done) {
+            loadFeed(0, done);
+        });
     });
 }());
