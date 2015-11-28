@@ -70,7 +70,7 @@ $(function() {
             var menuHidden = $('body');
 
             //Test if body element has 'menu-hidden' class by default
-            expect(menuHidden.hasClass('menu-hidden')).not.toBeFalsy();
+            expect(menuHidden.hasClass('menu-hidden')).toBeTruthy();
         });
 
         /* TODO: Write a test that ensures the menu changes
@@ -86,13 +86,13 @@ $(function() {
             menuClick.click();
 
             //Test if body doesn't have the class 'menu-hidden'
-            expect($('body').hasClass('menu-hidden')).not.toBeTruthy();
+            expect($('body').hasClass('menu-hidden')).toBeFalsy();
 
             //Trigger click on link again
             menuClick.click();
 
             //Test if body does have the class 'menu-hidden'
-            expect($('body').hasClass('menu-hidden')).not.toBeFalsy();
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
     });
 
