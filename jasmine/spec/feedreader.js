@@ -31,19 +31,15 @@ $(function() {
          * and that the URL is not empty.
          */
         it('URLs are defined', function() {
-            //Empty array to hold URLs of allFeeds
-            var feedsUrls = [];
 
-            //Loop through allFeeds variable and push into empty array
-            for (var i = 0; i < allFeeds.length; i++) {
-                feedsUrls.push(allFeeds[i].url);
-            };
+            //Loop through allFeeds variable to test URLs
+            for (var i in allFeeds) {
+                //Test that URLs are defined.
+                expect(allFeeds[i].url).toBeDefined();
 
-            //Test that allFeeds URLs to be defined
-            expect(feedsUrls).toBeDefined();
-
-            //Test that allFeeds Urls not to be empty
-            expect(feedsUrls.length).not.toBe(0);
+                //Test that URLs length isn't 0.
+                expect(allFeeds[i].url.length).not.toBe(0);
+            }
         });
 
         /* TODO: Write a test that loops through each feed
@@ -51,20 +47,14 @@ $(function() {
          * and that the name is not empty.
          */
         it('names are defined', function() {
-            //Empty array to hold names of allFeeds
-            var feedsName = [];
-
-            //Loop through allFeeds varialbe and push into empty array
-            for (var i = 0; i < allFeeds.length; i++) {
-                feedsName.push(allFeeds[i].name);
-            };
-
-            //Test that allFeeds names to be defined
-            expect(feedsName).toBeDefined();
-
-            //Test that allFeeds names not to be empty
-            expect(feedsName.length).not.toBe(0);
-        })
+            //Loop through allFeeds variable to test Names
+            for (var i in allFeeds) {
+                //Test that Names are defined.
+                expect(allFeeds[i].name).toBeDefined();
+                //Test that Names length isn't 0.
+                expect(allFeeds[i].name.length).not.toBe(0);
+            }
+        });
     });
 
     /* TODO: Write a new test suite named "The menu" */
