@@ -1,5 +1,7 @@
 ##Feed Reader Testing
 
+-NOTE- Google Feed Reader API has been deprecated and project isn't in working order at the moment.
+
 Run application with this link here
 
 TODO: http://jpetersun.github.io/frontend-nanodegree-feedreader/
