@@ -1,10 +1,10 @@
 ##Feed Reader Testing
 
--NOTE- Google Feed Reader API has been deprecated and project isn't in working order at the moment.
+-NOTE- Google Feed Reader API is still live for the moment and may be shutdown soon, so project may not work at a later date.
 
 Run application with this link here
 
-TODO: http://jpetersun.github.io/frontend-nanodegree-feedreader/
+http://jpetersun.github.io/frontend-nanodegree-feedreader/
 
 Testing site functionality with the Jasmine framework
 
