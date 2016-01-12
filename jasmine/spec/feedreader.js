@@ -27,7 +27,7 @@ $(function() {
 
 
 
-        it('URLs are defined', function() {
+        it('URLs are defined and are not empty', function() {
 
             //Loop through allFeeds variable to test URLs
             var len = allFeeds.length;
@@ -41,7 +41,7 @@ $(function() {
         });
 
 
-        it('names are defined', function() {
+        it('names are defined and are not empty', function() {
             //Loop through allFeeds variable to test Names
             var len = allFeeds.length;
             for (var i = 0; i < len; i++) {
