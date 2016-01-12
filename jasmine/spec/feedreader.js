@@ -30,7 +30,8 @@ $(function() {
         it('URLs are defined', function() {
 
             //Loop through allFeeds variable to test URLs
-            for (var i in allFeeds) {
+            var len = allFeeds.length;
+            for(var i = 0; i < len; i++) {
                 //Test that URLs are defined.
                 expect(allFeeds[i].url).toBeDefined();
 
@@ -42,7 +43,8 @@ $(function() {
 
         it('names are defined', function() {
             //Loop through allFeeds variable to test Names
-            for (var i in allFeeds) {
+            var len = allFeeds.length;
+            for (var i = 0; i < len; i++) {
                 //Test that Names are defined.
                 expect(allFeeds[i].name).toBeDefined();
                 //Test that Names length isn't 0.
