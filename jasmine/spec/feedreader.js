@@ -58,25 +58,25 @@ $(function() {
 
         it('element is hidden by default', function() {
             //Store body element as a variable to test
-            var menuHidden = $('body');
+            var $menuHidden = $('body');
 
             //Test if body element has 'menu-hidden' class by default
-            expect(menuHidden.hasClass('menu-hidden')).toBeTruthy();
+            expect($menuHidden.hasClass('menu-hidden')).toBeTruthy();
         });
 
 
         it('changes visibility when menu icon is clicked', function() {
             //Store '.menu-icon-link' as a variable to test
-            var menuClick = $('.menu-icon-link');
+            var $menuClick = $('.menu-icon-link');
 
             //Trigger click on link
-            menuClick.click();
+            $menuClick.click();
 
             //Test if body doesn't have the class 'menu-hidden'
             expect($('body').hasClass('menu-hidden')).toBeFalsy();
 
             //Trigger click on link again
-            menuClick.click();
+            $menuClick.click();
 
             //Test if body does have the class 'menu-hidden'
             expect($('body').hasClass('menu-hidden')).toBeTruthy();
@@ -90,7 +90,7 @@ $(function() {
         });
 
 
-        it('has atleast one entry element within feed container', function() {
+        it('has at least one entry element within feed container', function() {
             //Test if entry is inside the feed container class
             expect($('.feed .entry').length).not.toBe(0);
         });
@@ -113,7 +113,7 @@ $(function() {
             //Call loadFeed function with new index
             loadFeed(1, function() {
                 //Test if new feed differs from intial feed
-                expect($('.feed').html() !== firstFeed).toBeTruthy();
+                expect($('.feed').html()).not.toEqual(firstFeed);
                 done();
             });
         });
